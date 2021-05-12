@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'icon_content.dart';
 import 'reusable_card.dart';
 
 const bottomContainerHeight = 80.0;
@@ -22,8 +24,20 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: <Widget>[
-                Expanded(child: ReusableCard(color: activeCardColor)),
-                Expanded(child: ReusableCard(color: activeCardColor)),
+                Expanded(
+                  child: ReusableCard(
+                    color: activeCardColor,
+                    cardChild:
+                        IconContent(icon: FontAwesomeIcons.mars, label: 'MALE'),
+                  ),
+                ),
+                Expanded(
+                  child: ReusableCard(
+                    color: activeCardColor,
+                    cardChild: IconContent(
+                        icon: FontAwesomeIcons.venus, label: 'FEMALE'),
+                  ),
+                ),
               ],
             ),
           ),
