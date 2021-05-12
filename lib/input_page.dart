@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'reusable_card.dart';
 
 class InputPage extends StatefulWidget {
@@ -18,17 +17,17 @@ class _InputPageState extends State<InputPage> {
         Expanded(
           child: Row(
             children: <Widget>[
-              Expanded(child: ReusableCard()),
-              Expanded(child: ReusableCard()),
+              Expanded(child: ReusableCard(color: Color(0xFF1D1E33))),
+              Expanded(child: ReusableCard(color: Color(0xFF1D1E33))),
             ],
           ),
         ),
-        Expanded(child: ReusableCard()),
+        Expanded(child: ReusableCard(color: Color(0xFF1D1E33))),
         Expanded(
           child: Row(
             children: <Widget>[
-              Expanded(child: ReusableCard()),
-              Expanded(child: ReusableCard()),
+              Expanded(child: ReusableCard(color: Color(0xFF1D1E33))),
+              Expanded(child: ReusableCard(color: Color(0xFF1D1E33))),
             ],
           ),
         ),
