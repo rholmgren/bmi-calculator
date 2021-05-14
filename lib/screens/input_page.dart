@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'constants.dart';
-import 'icon_content.dart';
-import 'reusable_card.dart';
-import 'round_icon_button.dart';
+import '../constants.dart';
+import '../components/icon_content.dart';
+import '../components/reusable_card.dart';
+import '../components/round_icon_button.dart';
+import '../components/bottom_button.dart';
+import 'dart:developer';
+import 'results_page.dart';
 
 enum Gender { male, female }
 
@@ -188,11 +191,20 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: kBottomContainerColor,
-            margin: EdgeInsets.only(top: 10.0),
-            width: double.infinity,
-            height: kBottomContainerHeight,
+          BottomButton(
+            buttonTitle: 'CALCULATE',
+            onUserTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ResultsPage()));
+            },
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => ResultsPage(),
+            //     ),
+            //   );
+            // },
           )
         ],
       ),
